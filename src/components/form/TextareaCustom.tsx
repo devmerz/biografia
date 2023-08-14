@@ -1,5 +1,5 @@
-import { Input } from "antd";
-const { TextArea } = Input;
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 interface TextareaProps {
   value: string;
@@ -7,13 +7,5 @@ interface TextareaProps {
 }
 
 export default function TextareaCustom({ value, onChange }: TextareaProps) {
-  return (
-    <TextArea
-      rows={8}
-      placeholder="Como te ha ido?"
-      maxLength={10000}
-      value={value}
-      onChange={(event) => onChange(event.target.value)}
-    />
-  );
+  return <ReactQuill theme="snow" value={value} onChange={onChange} />;
 }

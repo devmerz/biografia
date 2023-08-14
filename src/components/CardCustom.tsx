@@ -6,9 +6,10 @@ interface CardCustomProps {
 }
 
 export default function CardCustom({ datetime, body }: CardCustomProps) {
+  const theObj = { __html: body };
   return (
     <Card title={datetime} bordered={true} style={{ margin: "10px" }}>
-      {body}
+      <div dangerouslySetInnerHTML={theObj} />
     </Card>
   );
 }
