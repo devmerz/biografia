@@ -31,10 +31,14 @@ module.exports = {
     "react/react-in-jsx-scope": "off",
     "@typescript-eslint/quotes": "off",
     "react/jsx-uses-react": "off",
+    "@typescript-eslint/member-delimiter-style": "off",
+    "@typescript-eslint/comma-dangle": "off",
+    "@typescript-eslint/type-annotation-spacing": "off",
+    "@typescript-eslint/no-confusing-void-expression": "off",
+    "@typescript-eslint/no-misused-promises": "off",
     "react/jsx-filename-extension": [
       1,
       { extensions: [".js", ".jsx", ".ts", ".tsx"] },
     ],
-    quotes: [2, "double"],
   },
 };
