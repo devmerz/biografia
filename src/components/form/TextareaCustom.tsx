@@ -9,7 +9,7 @@ interface TextareaProps {
 export default function TextareaCustom({ value, onChange }: TextareaProps) {
   return (
     <TextArea
-      rows={4}
+      rows={8}
       placeholder="Como te ha ido?"
       maxLength={10000}
       value={value}

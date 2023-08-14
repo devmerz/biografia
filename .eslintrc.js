@@ -36,6 +36,8 @@ module.exports = {
     "@typescript-eslint/type-annotation-spacing": "off",
     "@typescript-eslint/no-confusing-void-expression": "off",
     "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/no-extraneous-class": "off",
+    "@typescript-eslint/promise-function-async": "off",
     "react/jsx-filename-extension": [
       1,
       { extensions: [".js", ".jsx", ".ts", ".tsx"] },
