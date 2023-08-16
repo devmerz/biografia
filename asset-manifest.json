@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/biografia/static/css/main.4aed9b72.css",
+    "main.js": "/biografia/static/js/main.7d64fbd2.js",
+    "static/js/787.28cb0dcd.chunk.js": "/biografia/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/biografia/index.html",
+    "main.4aed9b72.css.map": "/biografia/static/css/main.4aed9b72.css.map",
+    "main.7d64fbd2.js.map": "/biografia/static/js/main.7d64fbd2.js.map",
+    "787.28cb0dcd.chunk.js.map": "/biografia/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4aed9b72.css",
+    "static/js/main.7d64fbd2.js"
+  ]
+}
