@@ -38,6 +38,8 @@ module.exports = {
     "@typescript-eslint/no-misused-promises": "off",
     "@typescript-eslint/no-extraneous-class": "off",
     "@typescript-eslint/promise-function-async": "off",
+    "multiline-ternary": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
     "react/jsx-filename-extension": [
       1,
       { extensions: [".js", ".jsx", ".ts", ".tsx"] },

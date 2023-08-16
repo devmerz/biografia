@@ -1,12 +1,8 @@
-import { useEffect, useState } from "react";
-import "./App.css";
-
+import React, { useState, useEffect } from "react";
 import { googleLogout, useGoogleLogin } from "@react-oauth/google";
-import { ProfileInterface, User } from "./interfaces/types";
-import Principal from "./components/Principal";
-import { Button } from "antd";
+import { ProfileInterface, User } from "../interfaces/types";
 
-function App() {
+function Profile() {
   const [user, setUser] = useState<User>();
   const [profile, setProfile] = useState<ProfileInterface>();
 
@@ -16,11 +12,6 @@ function App() {
     },
     onError: (error) => console.log("Login Failed:", error),
   });
-
-  const logOut = () => {
-    googleLogout();
-    setProfile(undefined);
-  };
 
   useEffect(() => {
     if (user) {
@@ -40,6 +31,7 @@ function App() {
           return response.json();
         })
         .then((data) => {
+          console.log("--->", data.id);
           setProfile(data);
         })
         .catch((error) => {
@@ -48,29 +40,27 @@ function App() {
     }
   }, [user]);
 
+  const logOut = () => {
+    googleLogout();
+    setProfile(undefined);
+  };
+
   return (
-    <div className="App">
+    <div>
       {profile ? (
         <div>
-          <center>
-            <img src={profile.picture} alt="user image" />
-            <p>Name: {profile.name}</p>
-            <p>Email Address: {profile.email}</p>
-            <Button type="primary" onClick={logOut} danger>
-              Logout
-            </Button>
-          </center>
+          <img src={profile.picture} alt="user image" />
+          <h3>User Logged in</h3>
+          <p>Name: {profile.name}</p>
+          <p>Email Address: {profile.email}</p>
           <br />
-
-          <Principal profile={profile}></Principal>
+          <br />
+          <button onClick={logOut}>Log out</button>
         </div>
       ) : (
-        <center>
-          <button onClick={() => login()}>Sign in with Google 🚀 </button>
-        </center>
+        <button onClick={() => login()}>Sign in with Google 🚀 </button>
       )}
     </div>
   );
 }
-
-export default App;
+export default Profile;
